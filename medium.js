@@ -238,9 +238,6 @@
             el.parentNode.removeChild(el);
           },
           placeholders: function (deletePlaceholder) {
-
-
-
             var placeholders = utils.getElementsByClassName(settings.cssClasses.placeholder, settings.element),
               innerText = utils.html.text(settings.element);
 
@@ -268,7 +265,6 @@
             }
           },
           clean: function () {
-
             /*
              * Deletes invalid nodes
              * Removes Attributes
@@ -360,11 +356,9 @@
       },
       intercept = {
         focus: function (e) {
-          _log('FOCUSED');
           utils.html.placeholders(true);
         },
         blur: function (e) {
-          _log('FOCUSED OUT');
           utils.html.placeholders();
         },
         down: function (e) {
